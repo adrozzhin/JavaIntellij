@@ -21,4 +21,6 @@ public class StaticDemo {
     static void method3() {
 
     }
+
+
 }
