@@ -4,15 +4,17 @@ public interface WebDriver {
     void open();
     void close();
     String getTitle();
+
 }
-interface RemoteWebDriver extends WebDriver {
-    void navigate();
-}
-interface TakesScreenShot extends RemoteWebDriver {
+
+interface TakesScreenShot {
     void getScreenshot();
 }
-class ChromeDriver implements RemoteWebDriver {
+interface RemoteWebDriver extends WebDriver, TakesScreenShot {
+    void navigate();
+}
 
+class ChromeDriver implements RemoteWebDriver {
     @Override
     public void open() {
         System.out.println("Chrome Driver opens browser");
@@ -25,17 +27,21 @@ class ChromeDriver implements RemoteWebDriver {
 
     @Override
     public String getTitle() {
-        String title = null;
-        return title;
+        return null;
+    }
+
+    @Override
+    public void getScreenshot() {
+        System.out.println("Take screenshot in Chrome Driver");
     }
 
     @Override
     public void navigate() {
         System.out.println("Chrome Driver navigates throw browser");
     }
+
 }
 class FirefoxDriver implements RemoteWebDriver {
-
     @Override
     public void open() {
         System.out.println("Firefox Driver opens browser");
@@ -48,8 +54,12 @@ class FirefoxDriver implements RemoteWebDriver {
 
     @Override
     public String getTitle() {
-        String title = null;
-        return title;
+        return null;
+    }
+
+    @Override
+    public void getScreenshot() {
+        System.out.println("Take screenshot in Firefox Driver");
     }
 
     @Override
@@ -58,7 +68,6 @@ class FirefoxDriver implements RemoteWebDriver {
     }
 }
 class SafariDriver implements RemoteWebDriver {
-
     @Override
     public void open() {
         System.out.println("Safari Driver opens browser");
@@ -71,12 +80,17 @@ class SafariDriver implements RemoteWebDriver {
 
     @Override
     public String getTitle() {
-        String title = null;
-        return title;
+        return null;
+    }
+
+    @Override
+    public void getScreenshot() {
+        System.out.println("Take screenshot in Safari Driver");
     }
 
     @Override
     public void navigate() {
         System.out.println("Safari Driver navigates throw browser");
     }
+
 }
