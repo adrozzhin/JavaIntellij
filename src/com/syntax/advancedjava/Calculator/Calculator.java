@@ -5,41 +5,52 @@ import java.util.Scanner;
 public class Calculator {
     private double value;
     static double subtotal;
+
     public Calculator() {
         this.value = 0.0;
     }
+
     public void add(double val) {
         this.value = value + val;
     }
+
     public void subtract(double val) {
         this.value = value - val;
     }
+
     public void multiply(double val) {
         this.value = value * val;
     }
+
     public void divide(double val) {
         this.value = value / val;
     }
+
     public void power(double val) {
-        this.value = Math.pow(value,val);
+        this.value = Math.pow(value, val);
     }
+
     public void clear() {
         this.value = 0.0;
     }
+
     public void subt() {
-        this.subtotal=value;
-        this.value=0.0;
+        this.subtotal = value;
+        this.value = 0.0;
     }
+
     public void returnSubtotal() {
-        double sum = value+subtotal;
-        this.value = sum-value;
-        this.subtotal= sum-value;
+        double sum = value + subtotal;
+        this.value = sum - value;
+        this.subtotal = sum - value;
 
     }
+
     public double getValue() {
         return value;
     }
 }
+
 class Tester extends Calculator {
 
     public static void main(String[] args) {
@@ -96,19 +107,9 @@ class Tester extends Calculator {
         System.out.println("value= " + calculator.getValue());
         calculator.divide(subtotal);
         System.out.println("value= " + calculator.getValue());
-        System.out.println("The final result of calculation of expression: (12x^3 + 5 - 3y^2)/(4y + x) with x= "+x+" and y="+y+" is:"+calculator.getValue());
-
-
-
-
-
-
-
-
-
+        System.out.println("The final result of calculation of expression: (12x^3 + 5 - 3y^2)/(4y + x) with x= " + x + " and y=" + y + " is:" + calculator.getValue());
 
     }
-
 }
 
 
