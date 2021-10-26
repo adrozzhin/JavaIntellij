@@ -15,7 +15,7 @@ public class Person {
     private int age;
     private double salary;
 
-    Person(String name, String lastName, int age, double salary) {
+    public Person(String name, String lastName, int age, double salary) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;

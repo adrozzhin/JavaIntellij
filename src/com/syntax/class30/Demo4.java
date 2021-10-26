@@ -11,12 +11,14 @@ public class Demo4 {
         electronics.put("Remote", 3.9);
         electronics.put("dryer", 5.5);
 
+
         Set<Map.Entry<String, Double>> entrySet = electronics.entrySet();
 
         for (Map.Entry<String, Double> entry: entrySet
              ) {
             System.out.println(entry.getKey() + "        " + entry.getValue());
         }
+        
 
     }
 }

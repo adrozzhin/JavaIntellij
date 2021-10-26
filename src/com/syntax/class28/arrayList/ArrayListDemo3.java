@@ -10,7 +10,7 @@ public class ArrayListDemo3 {
         arrayList.add("Mick");
         arrayList.add("Jane");
         arrayList.add("JOhn");
-        System.out.println(arrayList);
+        System.out.println(arrayList.get(0));
         arrayList.add(2,"Serge");
         System.out.println(arrayList);
 

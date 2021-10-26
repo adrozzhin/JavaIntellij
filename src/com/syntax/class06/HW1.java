@@ -11,6 +11,7 @@ public class HW1 {
 		System.out.println("Please enter your home country");
 		String country = scan.nextLine();
 		String language = null;
+
 		
 		switch (country) {
 		
